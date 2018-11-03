@@ -21,16 +21,16 @@ vector<int> findMinHeightTrees(int n, vector<pair<int, int>>& edges)
 		vector<int> leaves;
 		for (int i = 0; i < n; i++)
 		{
-      // height.count(i) 代表前一個while迴圈就已經記錄過深度了
+                        // height.count(i) 代表前一個while迴圈就已經記錄過深度了
 			if (height.count(i) || m[i].size() > 1)
 				continue;
-      // 找到小孩囉
+                        // 找到小孩囉
 			leaves.push_back(i);
 		}
 		for (int i = 0; i < leaves.size(); i++)
 		{
 			height[leaves[i]] = depth;
-      // 可能在前一個迴圈就被砍掉了
+                        // 可能在前一個迴圈就被砍掉了
 			if (m[leaves[i]].size() == 0) 
 				continue;
 			// 砍小孩囉
