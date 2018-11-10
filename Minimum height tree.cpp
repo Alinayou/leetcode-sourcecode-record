@@ -1,9 +1,3 @@
-#include<vector>
-#include<unordered_map>
-#include<unordered_set>
-#include <algorithm>
-using namespace std;
-
 vector<int> findMinHeightTrees(int n, vector<pair<int, int>>& edges)
 {
 	unordered_map<int, unordered_set<int> > m;
